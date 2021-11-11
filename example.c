@@ -6,7 +6,7 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 13:53:18 by nvasilev          #+#    #+#             */
-/*   Updated: 2021/11/11 17:38:31 by nvasilev         ###   ########.fr       */
+/*   Updated: 2021/11/11 18:03:40 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,19 @@
 
 int	main(void)
 {
-	// only prints the bits
-	print_bits(42, 16);
+	int	nb = 42;
 
+	printf("nb = %d\n", nb);
+	printf("\nprint_bits function:\n");
+	// only prints the bits
+	print_bits(nb, 16);
+
+	printf("\nprint_bits_schema function:\n");
 	// print the whole schema for better understanding
-	print_bits_schema(42, 16);
+	print_bits_schema(nb, 16);
+
+	nb <<= 1;
+	printf("\n(nb <<= 1) = %d\n", nb);
+	print_bits_schema(nb, 16);
 	return (0);
 }

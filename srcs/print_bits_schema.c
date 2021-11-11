@@ -6,7 +6,7 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:47:31 by nvasilev          #+#    #+#             */
-/*   Updated: 2021/11/11 16:51:54 by nvasilev         ###   ########.fr       */
+/*   Updated: 2021/11/11 18:01:08 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ static size_t	count_chars(size_t nb)
 	return (i);
 }
 
-static void	print_bits_width(size_t octet, unsigned int bits)
+static void	print_bits_width(ssize_t octet, unsigned int bits)
 {
 	size_t	i;
 	size_t	act;
 
 	i = 0;
 	act = power(2, (bits - 1));
-	while (octet && act)
+	while (octet >= 0 && act)
 	{
 		if (octet / act)
 		{
@@ -51,7 +51,7 @@ static void	print_bits_width(size_t octet, unsigned int bits)
 	printf("\n");
 }
 
-static void	print_bits_act(size_t octet, unsigned int bits)
+static void	print_bits_act(ssize_t octet, unsigned int bits)
 {
 	size_t	i;
 	size_t	act;
@@ -59,7 +59,7 @@ static void	print_bits_act(size_t octet, unsigned int bits)
 
 	i = 0;
 	act = power(2, (bits - 1));
-	while (octet && act)
+	while (octet >= 0 && act)
 	{
 		tmp = count_chars(act);
 		while (tmp > 1)
@@ -84,7 +84,7 @@ static void	print_bits_act(size_t octet, unsigned int bits)
 	printf("\n");
 }
 
-void	print_bits_schema(size_t octet, unsigned int bits)
+void	print_bits_schema(ssize_t octet, unsigned int bits)
 {
 	if (check_inputs(octet, bits))
 	{

@@ -6,7 +6,7 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:41:10 by nvasilev          #+#    #+#             */
-/*   Updated: 2021/11/11 16:54:06 by nvasilev         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:59:50 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putstr_color_fd(const char *color, const char *str, int fd);
 size_t	power(int base, int exp);
 
 int		check_inputs(__int64_t octet, unsigned int bits);
-void	print_bits(size_t octet, unsigned int bits);
-void	print_bits_schema(size_t octet, unsigned int bits);
+void	print_bits(ssize_t octet, unsigned int bits);
+void	print_bits_schema(ssize_t octet, unsigned int bits);
 
 #endif
